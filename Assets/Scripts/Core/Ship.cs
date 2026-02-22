@@ -28,7 +28,7 @@ namespace PirateGame.Core
         /// <param name="item">The item to buy</param>
         /// <param name="portEconomy">The port's economy system</param>
         /// <returns>True if purchase was successful, false otherwise</returns>
-        public bool BuyItem(ItemData item, PortEconomy portEconomy)
+        public bool BuyItem(PirateGame.Economy.ItemData item, PortEconomy portEconomy)
         {
             if (shipStats == null || item == null || portEconomy == null)
             {
@@ -69,7 +69,7 @@ namespace PirateGame.Core
         /// <param name="item">The item to sell</param>
         /// <param name="portEconomy">The port's economy system</param>
         /// <returns>True if sale was successful, false otherwise</returns>
-        public bool SellItem(ItemData item, PortEconomy portEconomy)
+        public bool SellItem(PirateGame.Economy.ItemData item, PortEconomy portEconomy)
         {
             if (shipStats == null || item == null || portEconomy == null)
             {
