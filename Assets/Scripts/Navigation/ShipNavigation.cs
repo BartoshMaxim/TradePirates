@@ -1,4 +1,5 @@
 using UnityEngine;
+using PirateGame.UI;
 
 namespace PirateGame.Navigation
 {
@@ -8,6 +9,7 @@ namespace PirateGame.Navigation
         [SerializeField] private float rotationSpeed = 5f;
         [SerializeField] private float arrivalThreshold = 0.5f;
         [SerializeField] private float maxSpeed = 10f;
+        [SerializeField] private UINotification uiNotification;
 
         private ShipStats shipStats;
         private bool isMoving = false;
@@ -46,6 +48,12 @@ namespace PirateGame.Navigation
             {
                 isMoving = false;
                 Debug.Log($"Arrived at {targetPort.PortName}");
+                
+                // Trigger UI notification
+                if (uiNotification != null)
+                {
+                    uiNotification.ShowNotification($"Arrived at {targetPort.PortName}");
+                }
                 return;
             }
 
@@ -78,6 +86,11 @@ namespace PirateGame.Navigation
         public Port GetCurrentTarget()
         {
             return targetPort;
+        }
+
+        public void SetUINotification(UINotification notification)
+        {
+            uiNotification = notification;
         }
     }
 }
