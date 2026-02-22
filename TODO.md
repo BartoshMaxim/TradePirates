@@ -7,7 +7,7 @@
 
 ## 2. World & Navigation
 - [x] Create Port.cs script. Fields: string portName, Vector2 coordinates.
-- [ ] Implement ShipNavigation.cs. The ship should rotate towards and move to a target Port object.
+- [x] Implement ShipNavigation.cs. The ship should rotate towards and move to a target Port object.
 - [ ] Add speed clamping in ShipNavigation based on ShipStats.baseSpeed.
 
 ## 3. Trading Prototype
