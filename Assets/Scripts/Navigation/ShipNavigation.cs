@@ -1,5 +1,6 @@
 using UnityEngine;
 using PirateGame.UI;
+using PirateGame.Core;
 
 namespace PirateGame.Navigation
 {
@@ -10,6 +11,7 @@ namespace PirateGame.Navigation
         [SerializeField] private float arrivalThreshold = 0.5f;
         [SerializeField] private float maxSpeed = 10f;
         [SerializeField] private UINotification uiNotification;
+        [SerializeField] private GameStateManager gameStateManager;
 
         private ShipStats shipStats;
         private bool isMoving = false;
@@ -21,11 +23,24 @@ namespace PirateGame.Navigation
             {
                 Debug.LogError("ShipStats component not found on the same GameObject!");
             }
+            
+            // Auto-find GameStateManager if not assigned
+            if (gameStateManager == null)
+            {
+                gameStateManager = FindObjectOfType<GameStateManager>();
+            }
         }
 
         void Update()
         {
             if (targetPort == null || !isMoving) return;
+            
+            // Block movement if not in WorldMap state
+            if (gameStateManager != null && gameStateManager.CurrentState != GameState.WorldMap)
+            {
+                isMoving = false;
+                return;
+            }
 
             MoveTowardsTarget();
             RotateTowardsTarget();
@@ -49,7 +64,13 @@ namespace PirateGame.Navigation
                 isMoving = false;
                 Debug.Log($"Arrived at {targetPort.PortName}");
                 
-                // Trigger UI notification
+                // Change game state to Port
+                if (gameStateManager != null)
+                {
+                    gameStateManager.ChangeState(GameState.Port);
+                }
+                
+                // Trigger UI notification (kept for backward compatibility, but could be moved to UI manager)
                 if (uiNotification != null)
                 {
                     uiNotification.ShowNotification($"Arrived at {targetPort.PortName}");
