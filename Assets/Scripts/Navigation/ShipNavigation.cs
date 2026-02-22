@@ -14,6 +14,7 @@ namespace PirateGame.Navigation
         [SerializeField] private GameStateManager gameStateManager;
 
         private ShipStats shipStats;
+        private Rigidbody2D rb;
         private bool isMoving = false;
 
         void Start()
@@ -24,6 +25,12 @@ namespace PirateGame.Navigation
                 Debug.LogError("ShipStats component not found on the same GameObject!");
             }
             
+            rb = GetComponent<Rigidbody2D>();
+            if (rb == null)
+            {
+                Debug.LogError("Rigidbody2D component not found on the same GameObject!");
+            }
+            
             // Auto-find GameStateManager if not assigned
             if (gameStateManager == null)
             {
@@ -31,7 +38,7 @@ namespace PirateGame.Navigation
             }
         }
 
-        void Update()
+        void FixedUpdate()
         {
             if (targetPort == null || !isMoving) return;
             
@@ -39,6 +46,10 @@ namespace PirateGame.Navigation
             if (gameStateManager != null && gameStateManager.CurrentState != GameState.WorldMap)
             {
                 isMoving = false;
+                if (rb != null)
+                {
+                    rb.velocity = Vector2.zero;
+                }
                 return;
             }
 
@@ -68,12 +79,6 @@ namespace PirateGame.Navigation
                 if (gameStateManager != null)
                 {
                     gameStateManager.ChangeState(GameState.Port);
-                }
-                
-                // Trigger UI notification (kept for backward compatibility, but could be moved to UI manager)
-                if (uiNotification != null)
-                {
-                    uiNotification.ShowNotification($"Arrived at {targetPort.PortName}");
                 }
                 return;
             }
