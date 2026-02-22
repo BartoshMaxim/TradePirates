@@ -7,6 +7,7 @@ namespace PirateGame.Navigation
         [SerializeField] private Port targetPort;
         [SerializeField] private float rotationSpeed = 5f;
         [SerializeField] private float arrivalThreshold = 0.5f;
+        [SerializeField] private float maxSpeed = 10f;
 
         private ShipStats shipStats;
         private bool isMoving = false;
@@ -49,6 +50,8 @@ namespace PirateGame.Navigation
             }
 
             float speed = shipStats != null ? shipStats.BaseSpeed : 1f;
+            speed = Mathf.Clamp(speed, 0f, maxSpeed);
+            
             Vector2 direction = (targetPosition - currentPosition).normalized;
             Vector2 movement = direction * speed * Time.deltaTime;
             
