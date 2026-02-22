@@ -11,8 +11,8 @@
 - [x] Add speed clamping in ShipNavigation based on ShipStats.baseSpeed.
 
 ## 3. Trading Prototype
-- [ ] Create PortEconomy.cs. It should store a list of prices for different ItemData.
-- [ ] Implement BuyItem and SellItem methods in the Ship class to update gold and check cargoCapacity.
+- [x] Create PortEconomy.cs. It should store a list of prices for different ItemData.
+- [x] Implement BuyItem and SellItem methods in the Ship class to update gold and check cargoCapacity.
 
 ## 4. Basic UI
 - [ ] Create HUDManager.cs to display Current Gold and Cargo status on the screen.
