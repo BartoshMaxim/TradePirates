@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using PirateGame.Core;
 
 namespace PirateGame.Economy
 {
