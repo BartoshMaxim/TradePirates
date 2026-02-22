@@ -16,4 +16,4 @@
 
 ## 4. Basic UI
 - [x] Create HUDManager.cs to display Current Gold and Cargo status on the screen.
-- [ ] Implement a simple UI notification when the ship arrives at a port.
+- [x] Implement a simple UI notification when the ship arrives at a port.
