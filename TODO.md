@@ -39,18 +39,18 @@ All movement, UI and encounter logic must depend on this state machine.
 
 ### 5.2 Create GameStateManager.cs
 
-- [ ] Create GameStateManager.cs in Assets/Scripts/Core.
-- [ ] Namespace: PirateGame.Core.
-- [ ] Class must inherit from MonoBehaviour.
-- [ ] Add [SerializeField] private GameState currentState initialized to WorldMap.
-- [ ] Add public GameState CurrentState getter (read-only).
-- [ ] Add public method ChangeState(GameState newState).
-- [ ] ChangeState must:
+- [x] Create GameStateManager.cs in Assets/Scripts/Core.
+- [x] Namespace: PirateGame.Core.
+- [x] Class must inherit from MonoBehaviour.
+- [x] Add [SerializeField] private GameState currentState initialized to WorldMap.
+- [x] Add public GameState CurrentState getter (read-only).
+- [x] Add public method ChangeState(GameState newState).
+- [x] ChangeState must:
       - Return early if state is identical.
       - Invoke OnStateExited event before changing state.
       - Update currentState.
       - Invoke OnStateEntered event after change.
-- [ ] Add events:
+- [x] Add events:
       - public event Action<GameState> OnStateEntered;
       - public event Action<GameState> OnStateExited;
 
@@ -66,41 +66,41 @@ All movement, UI and encounter logic must depend on this state machine.
 
 ### 5.4 Integrate with ShipNavigation
 
-- [ ] Add [SerializeField] GameStateManager reference to ShipNavigation.
-- [ ] In FixedUpdate(), block movement if:
+- [x] Add [SerializeField] GameStateManager reference to ShipNavigation.
+- [x] In FixedUpdate(), block movement if:
         CurrentState != GameState.WorldMap
-- [ ] When blocked:
+- [x] When blocked:
         - Set Rigidbody2D velocity to zero.
         - Do not rotate ship.
-- [ ] Do NOT remove existing movement logic.
-- [ ] Only wrap it with state check.
+- [x] Do NOT remove existing movement logic.
+- [x] Only wrap it with state check.
 
 ---
 
 ### 5.5 Port Arrival Integration
 
-- [ ] When ShipNavigation detects arrival at Port:
+- [x] When ShipNavigation detects arrival at Port:
         - Call gameStateManager.ChangeState(GameState.Port);
-- [ ] Remove any direct UI calls from ShipNavigation.
-- [ ] ShipNavigation must not open UI directly.
+- [x] Remove any direct UI calls from ShipNavigation.
+- [x] ShipNavigation must not open UI directly.
 
 ---
 
 ### 5.6 Encounter Preparation Hook
 
-- [ ] Create placeholder method in EncounterManager:
+- [x] Create placeholder method in EncounterManager:
         TriggerEncounter()
-- [ ] TriggerEncounter must:
+- [x] TriggerEncounter must:
         - Call gameStateManager.ChangeState(GameState.Encounter);
-- [ ] Do NOT implement combat yet.
+- [x] Do NOT implement combat yet.
 
 ---
 
 ### 5.7 State Debug Logging
 
-- [ ] Add Debug.Log in GameStateManager.ChangeState:
+- [x] Add Debug.Log in GameStateManager.ChangeState:
         "GameState changed from X to Y"
-- [ ] Logging must be wrapped with UNITY_EDITOR conditional compilation.
+- [x] Logging must be wrapped with UNITY_EDITOR conditional compilation.
 
 ---
 
