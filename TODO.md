@@ -28,12 +28,12 @@ All movement, UI and encounter logic must depend on this state machine.
 
 ### 5.1 Create GameState enum
 
-- [ ] Create GameState enum inside PirateGame.Core namespace.
-- [ ] Enum must contain exactly:
+- [x] Create GameState enum inside PirateGame.Core namespace.
+- [x] Enum must contain exactly:
       - WorldMap
       - Port
       - Encounter
-- [ ] Do NOT add additional states.
+- [x] Do NOT add additional states.
 
 ---
 
