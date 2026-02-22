@@ -15,5 +15,5 @@
 - [x] Implement BuyItem and SellItem methods in the Ship class to update gold and check cargoCapacity.
 
 ## 4. Basic UI
-- [ ] Create HUDManager.cs to display Current Gold and Cargo status on the screen.
+- [x] Create HUDManager.cs to display Current Gold and Cargo status on the screen.
 - [ ] Implement a simple UI notification when the ship arrives at a port.
