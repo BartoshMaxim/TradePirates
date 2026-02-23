@@ -1,11 +1,16 @@
 using UnityEngine;
 using PirateGame.Economy;
+using System;
 
 namespace PirateGame.Core
 {
     public class Ship : MonoBehaviour
     {
         [SerializeField] private ShipStats shipStats;
+        
+        // Event-driven UI events exposed by Ship
+        public event Action<int> OnGoldChanged;
+        public event Action<int, int> OnCargoChanged;
         
         private void Start()
         {
@@ -19,6 +24,31 @@ namespace PirateGame.Core
             {
                 Debug.LogError("ShipStats component not found on the same GameObject!");
             }
+            else
+            {
+                // Forward events from ShipStats
+                shipStats.OnGoldChanged += HandleGoldChanged;
+                shipStats.OnCargoChanged += HandleCargoChanged;
+            }
+        }
+        
+        private void OnDestroy()
+        {
+            if (shipStats != null)
+            {
+                shipStats.OnGoldChanged -= HandleGoldChanged;
+                shipStats.OnCargoChanged -= HandleCargoChanged;
+            }
+        }
+        
+        private void HandleGoldChanged(int gold)
+        {
+            OnGoldChanged?.Invoke(gold);
+        }
+        
+        private void HandleCargoChanged(int currentCargo, int maxCargo)
+        {
+            OnCargoChanged?.Invoke(currentCargo, maxCargo);
         }
         
         /// <summary>
