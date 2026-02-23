@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using PirateGame.Core;
 
 namespace PirateGame.UI
@@ -7,8 +7,32 @@ namespace PirateGame.UI
     public class HUDManager : MonoBehaviour
     {
         [SerializeField] private Ship ship;
-        [SerializeField] private Text goldText;
-        [SerializeField] private Text cargoText;
+        [SerializeField] private TextMeshProUGUI goldText;
+        [SerializeField] private TextMeshProUGUI cargoText;
+        
+        private void OnEnable()
+        {
+            // Subscribe to events
+            if (ship != null)
+            {
+                ship.OnGoldChanged += UpdateGoldDisplay;
+                ship.OnCargoChanged += UpdateCargoDisplay;
+                
+                // Initialize display with current values
+                UpdateGoldDisplay(ship.GetGold());
+                // Cargo display will be updated when the event fires
+            }
+        }
+        
+        private void OnDisable()
+        {
+            // Unsubscribe from events
+            if (ship != null)
+            {
+                ship.OnGoldChanged -= UpdateGoldDisplay;
+                ship.OnCargoChanged -= UpdateCargoDisplay;
+            }
+        }
         
         private void Start()
         {
@@ -30,17 +54,20 @@ namespace PirateGame.UI
             }
         }
         
-        private void Update()
+        private void UpdateGoldDisplay(int gold)
         {
-            if (ship == null || goldText == null || cargoText == null) return;
-            
-            // Update gold display
-            int currentGold = ship.GetGold();
-            goldText.text = $"Gold: {currentGold}";
-            
-            // Update cargo display
-            int currentCargo = ship.GetCargoCapacity();
-            cargoText.text = $"Cargo: {currentCargo}";
+            if (goldText != null)
+            {
+                goldText.text = $"Gold: {gold}";
+            }
+        }
+        
+        private void UpdateCargoDisplay(int currentCargo, int maxCargo)
+        {
+            if (cargoText != null)
+            {
+                cargoText.text = $"Cargo: {currentCargo}/{maxCargo}";
+            }
         }
         
         /// <summary>
@@ -49,14 +76,32 @@ namespace PirateGame.UI
         /// <param name="targetShip">The ship to track</param>
         public void SetShip(Ship targetShip)
         {
+            // Unsubscribe from old ship if exists
+            if (ship != null)
+            {
+                ship.OnGoldChanged -= UpdateGoldDisplay;
+                ship.OnCargoChanged -= UpdateCargoDisplay;
+            }
+            
             ship = targetShip;
+            
+            // Subscribe to new ship
+            if (ship != null)
+            {
+                ship.OnGoldChanged += UpdateGoldDisplay;
+                ship.OnCargoChanged += UpdateCargoDisplay;
+                
+                // Update display with new ship's values
+                UpdateGoldDisplay(ship.GetGold());
+                // Cargo display will be updated when the event fires
+            }
         }
         
         /// <summary>
         /// Set the UI Text component for displaying gold
         /// </summary>
         /// <param name="textComponent">The Text component for gold display</param>
-        public void SetGoldText(Text textComponent)
+        public void SetGoldText(TextMeshProUGUI textComponent)
         {
             goldText = textComponent;
         }
@@ -65,7 +110,7 @@ namespace PirateGame.UI
         /// Set the UI Text component for displaying cargo status
         /// </summary>
         /// <param name="textComponent">The Text component for cargo display</param>
-        public void SetCargoText(Text textComponent)
+        public void SetCargoText(TextMeshProUGUI textComponent)
         {
             cargoText = textComponent;
         }

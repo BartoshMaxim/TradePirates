@@ -1,11 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 namespace PirateGame.UI
 {
     public class UINotification : MonoBehaviour
     {
-        [SerializeField] private Text notificationText;
+        [SerializeField] private TextMeshProUGUI notificationText;
         [SerializeField] private float displayDuration = 3f;
         [SerializeField] private float fadeDuration = 0.5f;
 
@@ -73,7 +73,7 @@ namespace PirateGame.UI
         /// Set the Text component for displaying notifications
         /// </summary>
         /// <param name="textComponent">The Text component for notifications</param>
-        public void SetNotificationText(Text textComponent)
+        public void SetNotificationText(TextMeshProUGUI textComponent)
         {
             notificationText = textComponent;
         }
