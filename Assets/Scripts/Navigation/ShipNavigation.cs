@@ -87,9 +87,13 @@ namespace PirateGame.Navigation
             speed = Mathf.Clamp(speed, 0f, maxSpeed);
             
             Vector2 direction = (targetPosition - currentPosition).normalized;
-            Vector2 movement = direction * speed * Time.deltaTime;
+            Vector2 movement = direction * speed * Time.fixedDeltaTime;
             
-            transform.position += new Vector3(movement.x, movement.y, 0);
+            // Use rb.MovePosition instead of modifying transform.position directly
+            if (rb != null)
+            {
+                rb.MovePosition(rb.position + movement);
+            }
         }
 
         private void RotateTowardsTarget()
@@ -101,7 +105,12 @@ namespace PirateGame.Navigation
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             
             Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            
+            // Use rb.MoveRotation instead of modifying transform.rotation directly
+            if (rb != null)
+            {
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime));
+            }
         }
 
         public bool IsMoving()
