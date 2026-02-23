@@ -149,7 +149,7 @@ GOAL: Replace primitive cargo int with a structured inventory supporting stackin
   - Fields: public ItemData item, public int quantity.
   - Ensure namespace is PirateGame.Core.
 
-- [ ] 7.2 Update ItemData: In ItemData.cs (Economy namespace), add:
+- [x] 7.2 Update ItemData: In ItemData.cs (Economy namespace), add:
   - [SerializeField] private int maxStack = 99;
   - [SerializeField] private float weight = 1f;
   - Add public getters for these. Do NOT rename or remove existing fields.
