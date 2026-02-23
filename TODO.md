@@ -144,7 +144,7 @@ The following must be true:
 ## 7. Inventory System Refactor
 GOAL: Replace primitive cargo int with a structured inventory supporting stacking, max slots, and weight capacity.
 
-- [ ] 7.1 InventoryItem Data Structure: Create InventoryItem.cs in Assets/Scripts/Core.
+- [x] 7.1 InventoryItem Data Structure: Create InventoryItem.cs in Assets/Scripts/Core.
   - Must be a [Serializable] class (or struct) and NOT inherit from MonoBehaviour.
   - Fields: public ItemData item, public int quantity.
   - Ensure namespace is PirateGame.Core.
