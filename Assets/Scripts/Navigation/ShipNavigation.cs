@@ -52,8 +52,12 @@ namespace PirateGame.Navigation
             // Block movement if not in WorldMap state
             if (gameStateManager != null && gameStateManager.CurrentState != GameState.WorldMap)
             {
+                // Stop all physics movement when not in WorldMap state
+                if (rb != null)
+                {
+                    rb.velocity = Vector2.zero;
+                }
                 // Don't modify isMoving so movement can resume when returning to WorldMap
-                // Don't set velocity since we're using MovePosition/MoveRotation
                 return;
             }
 
