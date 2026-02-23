@@ -132,7 +132,7 @@ The following must be true:
 
 - [x] **6.1 Clean up Duplicates:** Delete `Assets/Scripts/Core/ItemData.cs`. Keep only `Assets/Scripts/Economy/ItemData.cs`. Ensure `Ship.cs` and `PortEconomy.cs` use `using PirateGame.Economy;`.
 - [x] **6.2 Implement Event-Driven UI:** In `Ship.cs` or `ShipStats.cs`, add `public event Action<int> OnGoldChanged;` and `public event Action<int, int> OnCargoChanged;` (passing current and max cargo). Trigger these events whenever gold or cargo changes.
-- [ ] **6.3 Refactor HUDManager:** Migrate from legacy `UnityEngine.UI.Text` to `TMPro.TextMeshProUGUI` (requires `using TMPro;`). Remove the `Update()` method entirely. Instead, subscribe to `Ship.OnGoldChanged` and `Ship.OnCargoChanged` in `Start()` / `OnEnable()` and unsubscribe in `OnDisable()`. Do the same TMPro migration for `UINotification.cs`.
+- [x] **6.3 Refactor HUDManager:** Migrate from legacy `UnityEngine.UI.Text` to `TMPro.TextMeshProUGUI` (requires `using TMPro;`). Remove the `Update()` method entirely. Instead, subscribe to `Ship.OnGoldChanged` and `Ship.OnCargoChanged` in `Start()` / `OnEnable()` and unsubscribe in `OnDisable()`. Do the same TMPro migration for `UINotification.cs`.
 - [ ] **6.4 Real Inventory System:** In `Ship.cs`, implement a real inventory using `private Dictionary<ItemData, int> cargoInventory`. 
     - `BuyItem`: Check if `currentCargoLoad < shipStats.CargoCapacity`. If true, add to dictionary, deduct gold, increase `currentCargoLoad`, trigger events.
     - `SellItem`: Check if `cargoInventory.ContainsKey(item)` and amount > 0. If true, remove from dictionary, add gold, decrease `currentCargoLoad`, trigger events.
