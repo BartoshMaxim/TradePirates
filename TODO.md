@@ -154,19 +154,19 @@ GOAL: Replace primitive cargo int with a structured inventory supporting stackin
   - [SerializeField] private float weight = 1f;
   - Add public getters for these. Do NOT rename or remove existing fields.
 
-- [ ] 7.3 Inventory Component: Create Inventory.cs in Assets/Scripts/Core. Inherit from MonoBehaviour.
+- [x] 7.3 Inventory Component: Create Inventory.cs in Assets/Scripts/Core. Inherit from MonoBehaviour.
   - Fields: [SerializeField] private List<InventoryItem> items, bool useWeightCapacity, float maxWeight, int maxSlots.
   - Events: public event Action OnInventoryChanged.
   - Methods to implement: bool AddItem(ItemData, int), bool RemoveItem(ItemData, int), bool CanAdd(ItemData, int), int GetQuantity(ItemData), float GetTotalWeight().
   - Crucial Stacking Logic: In AddItem, first try to add to an existing InventoryItem of the same ItemData without exceeding maxStack. Only create a new InventoryItem if existing stacks are full and items.Count < maxSlots.
 
-- [ ] 7.4 Ship & ShipStats Integration: - In ShipStats.cs, add [SerializeField] private Inventory inventory; and a public getter. 
+- [x] 7.4 Ship & ShipStats Integration: - In ShipStats.cs, add [SerializeField] private Inventory inventory; and a public getter. 
   - Deprecate or carefully replace the old currentCargo int logic. Do NOT remove other unrelated public members.
   - In Ship.cs, refactor the BuyItem and SellItem methods:
     - Buy: First check shipStats.Gold >= price AND Inventory.CanAdd(item, amount). Only if BOTH are true: deduct gold, call Inventory.AddItem, and trigger UI events.
     - Sell: First check Inventory.GetQuantity(item) >= amount. If true: call Inventory.RemoveItem, add gold, trigger UI events.
 
-- [ ] 7.5 HUD Update: In HUDManager.cs (PirateGame.UI namespace):
+- [x] 7.5 HUD Update: In HUDManager.cs (PirateGame.UI namespace):
   - Subscribe to Inventory.OnInventoryChanged in Start or OnEnable.
   - Update the UI TextMeshPro fields to display: "Gold: [X]" and "Weight: [Current]/[Max]" (or Slots).
   
