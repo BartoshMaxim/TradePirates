@@ -1,6 +1,7 @@
 using UnityEngine;
 using PirateGame.Economy;
 using System;
+using System.Collections.Generic;
 
 namespace PirateGame.Core
 {
@@ -11,6 +12,9 @@ namespace PirateGame.Core
         // Event-driven UI events exposed by Ship
         public event Action<int> OnGoldChanged;
         public event Action<int, int> OnCargoChanged;
+        
+        private Dictionary<ItemData, int> cargoInventory = new Dictionary<ItemData, int>();
+        private int currentCargoLoad = 0;
         
         private void Start()
         {
@@ -29,6 +33,9 @@ namespace PirateGame.Core
                 // Forward events from ShipStats
                 shipStats.OnGoldChanged += HandleGoldChanged;
                 shipStats.OnCargoChanged += HandleCargoChanged;
+                
+                // Initialize currentCargoLoad based on starting cargo capacity
+                currentCargoLoad = shipStats.GetMaxCargoCapacity() - shipStats.CargoCapacity;
             }
         }
         
@@ -75,9 +82,8 @@ namespace PirateGame.Core
                 return false;
             }
             
-            // Check cargo capacity (assuming 1 unit per item)
-            // Note: This is a simple implementation. You might want a cargo inventory system
-            if (shipStats.CargoCapacity <= 0)
+            // Check cargo capacity
+            if (currentCargoLoad >= shipStats.GetMaxCargoCapacity())
             {
                 Debug.Log($"No cargo capacity available to buy {item.ItemName}");
                 return false;
@@ -86,10 +92,23 @@ namespace PirateGame.Core
             // Deduct gold
             shipStats.Gold -= price;
             
-            // Reduce cargo capacity (simple implementation)
-            shipStats.CargoCapacity -= 1;
+            // Add item to inventory
+            if (cargoInventory.ContainsKey(item))
+            {
+                cargoInventory[item]++;
+            }
+            else
+            {
+                cargoInventory[item] = 1;
+            }
             
-            Debug.Log($"Bought {item.ItemName} for {price} gold. Remaining gold: {shipStats.Gold}, Cargo capacity: {shipStats.CargoCapacity}");
+            // Increase cargo load
+            currentCargoLoad++;
+            
+            // Update cargo capacity in ShipStats (this will trigger the OnCargoChanged event)
+            shipStats.CargoCapacity = shipStats.GetMaxCargoCapacity() - currentCargoLoad;
+            
+            Debug.Log($"Bought {item.ItemName} for {price} gold. Remaining gold: {shipStats.Gold}, Cargo load: {currentCargoLoad}/{shipStats.GetMaxCargoCapacity()}");
             return true;
         }
         
@@ -107,25 +126,32 @@ namespace PirateGame.Core
                 return false;
             }
             
-            int price = portEconomy.GetItemPrice(item);
-            
-            // Check if ship has cargo to sell (simple implementation)
-            // In a real system, you'd check if the item is actually in the cargo hold
-            // For now, we'll assume the ship always has items to sell if there's capacity used
-            // This is a placeholder implementation
-            if (shipStats.CargoCapacity >= 100) // Assuming 100 is max capacity
+            // Check if item exists in inventory
+            if (!cargoInventory.ContainsKey(item) || cargoInventory[item] <= 0)
             {
-                Debug.Log($"No cargo capacity used to sell items");
+                Debug.Log($"No {item.ItemName} in cargo to sell");
                 return false;
             }
+            
+            int price = portEconomy.GetItemPrice(item);
             
             // Add gold
             shipStats.Gold += price;
             
-            // Increase cargo capacity (freeing up space)
-            shipStats.CargoCapacity += 1;
+            // Remove item from inventory
+            cargoInventory[item]--;
+            if (cargoInventory[item] <= 0)
+            {
+                cargoInventory.Remove(item);
+            }
             
-            Debug.Log($"Sold {item.ItemName} for {price} gold. Total gold: {shipStats.Gold}, Cargo capacity: {shipStats.CargoCapacity}");
+            // Decrease cargo load
+            currentCargoLoad--;
+            
+            // Update cargo capacity in ShipStats (this will trigger the OnCargoChanged event)
+            shipStats.CargoCapacity = shipStats.GetMaxCargoCapacity() - currentCargoLoad;
+            
+            Debug.Log($"Sold {item.ItemName} for {price} gold. Total gold: {shipStats.Gold}, Cargo load: {currentCargoLoad}/{shipStats.GetMaxCargoCapacity()}");
             return true;
         }
         
@@ -143,6 +169,38 @@ namespace PirateGame.Core
         public int GetCargoCapacity()
         {
             return shipStats != null ? shipStats.CargoCapacity : 0;
+        }
+        
+        /// <summary>
+        /// Get the current cargo load
+        /// </summary>
+        public int GetCurrentCargoLoad()
+        {
+            return currentCargoLoad;
+        }
+        
+        /// <summary>
+        /// Get the maximum cargo capacity
+        /// </summary>
+        public int GetMaxCargoCapacity()
+        {
+            return shipStats != null ? shipStats.GetMaxCargoCapacity() : 0;
+        }
+        
+        /// <summary>
+        /// Get the cargo inventory
+        /// </summary>
+        public Dictionary<ItemData, int> GetCargoInventory()
+        {
+            return new Dictionary<ItemData, int>(cargoInventory);
+        }
+        
+        /// <summary>
+        /// Get the quantity of a specific item in cargo
+        /// </summary>
+        public int GetItemQuantity(ItemData item)
+        {
+            return cargoInventory.ContainsKey(item) ? cargoInventory[item] : 0;
         }
     }
 }
