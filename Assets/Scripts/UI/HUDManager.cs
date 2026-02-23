@@ -10,6 +10,8 @@ namespace PirateGame.UI
         [SerializeField] private TextMeshProUGUI goldText;
         [SerializeField] private TextMeshProUGUI cargoText;
         
+        private Inventory shipInventory;
+        
         private void OnEnable()
         {
             // Subscribe to events
@@ -18,9 +20,16 @@ namespace PirateGame.UI
                 ship.OnGoldChanged += UpdateGoldDisplay;
                 ship.OnCargoChanged += UpdateCargoDisplay;
                 
+                // Get the inventory from ship stats
+                if (ship.GetComponent<ShipStats>()?.Inventory != null)
+                {
+                    shipInventory = ship.GetComponent<ShipStats>().Inventory;
+                    shipInventory.OnInventoryChanged += UpdateInventoryDisplay;
+                }
+                
                 // Initialize display with current values
                 UpdateGoldDisplay(ship.GetGold());
-                // Cargo display will be updated when the event fires
+                UpdateInventoryDisplay();
             }
         }
         
@@ -31,6 +40,11 @@ namespace PirateGame.UI
             {
                 ship.OnGoldChanged -= UpdateGoldDisplay;
                 ship.OnCargoChanged -= UpdateCargoDisplay;
+                
+                if (shipInventory != null)
+                {
+                    shipInventory.OnInventoryChanged -= UpdateInventoryDisplay;
+                }
             }
         }
         
@@ -64,9 +78,22 @@ namespace PirateGame.UI
         
         private void UpdateCargoDisplay(int currentCargo, int maxCargo)
         {
-            if (cargoText != null)
+            // This is kept for backward compatibility
+            // But we'll use UpdateInventoryDisplay instead
+        }
+        
+        private void UpdateInventoryDisplay()
+        {
+            if (cargoText != null && shipInventory != null)
             {
-                cargoText.text = $"Cargo: {currentCargo}/{maxCargo}";
+                float currentWeight = shipInventory.GetTotalWeight();
+                // For now, display weight. In the future, we might want to display slots
+                cargoText.text = $"Weight: {currentWeight:F1}/{shipInventory.MaxWeight:F1}";
+            }
+            else if (cargoText != null)
+            {
+                // Fallback to old display if no inventory
+                cargoText.text = $"Cargo: 0/0";
             }
         }
         
@@ -81,6 +108,11 @@ namespace PirateGame.UI
             {
                 ship.OnGoldChanged -= UpdateGoldDisplay;
                 ship.OnCargoChanged -= UpdateCargoDisplay;
+                
+                if (shipInventory != null)
+                {
+                    shipInventory.OnInventoryChanged -= UpdateInventoryDisplay;
+                }
             }
             
             ship = targetShip;
@@ -91,9 +123,16 @@ namespace PirateGame.UI
                 ship.OnGoldChanged += UpdateGoldDisplay;
                 ship.OnCargoChanged += UpdateCargoDisplay;
                 
+                // Get the inventory from ship stats
+                if (ship.GetComponent<ShipStats>()?.Inventory != null)
+                {
+                    shipInventory = ship.GetComponent<ShipStats>().Inventory;
+                    shipInventory.OnInventoryChanged += UpdateInventoryDisplay;
+                }
+                
                 // Update display with new ship's values
                 UpdateGoldDisplay(ship.GetGold());
-                // Cargo display will be updated when the event fires
+                UpdateInventoryDisplay();
             }
         }
         

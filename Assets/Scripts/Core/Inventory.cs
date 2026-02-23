@@ -14,6 +14,10 @@ namespace PirateGame.Core
 
         public event Action OnInventoryChanged;
 
+        public float MaxWeight => maxWeight;
+        public int MaxSlots => maxSlots;
+        public bool UseWeightCapacity => useWeightCapacity;
+
         public bool AddItem(ItemData item, int amount)
         {
             if (!CanAdd(item, amount))

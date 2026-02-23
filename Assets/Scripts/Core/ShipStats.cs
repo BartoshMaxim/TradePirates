@@ -8,6 +8,7 @@ namespace PirateGame.Core
         [SerializeField] private int gold;
         [SerializeField] private float baseSpeed;
         [SerializeField] private int cargoCapacity;
+        [SerializeField] private Inventory inventory;
 
         // Event-driven UI events
         public event Action<int> OnGoldChanged;
@@ -54,6 +55,8 @@ namespace PirateGame.Core
                 }
             }
         }
+
+        public Inventory Inventory => inventory;
 
         // Helper method to get max cargo capacity (for UI)
         public int GetMaxCargoCapacity()
