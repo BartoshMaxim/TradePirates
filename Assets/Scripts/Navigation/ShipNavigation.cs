@@ -65,7 +65,7 @@ namespace PirateGame.Navigation
 
         private void MoveTowardsTarget()
         {
-            Vector2 currentPosition = transform.position;
+            Vector2 currentPosition = rb.position;
             Vector2 targetPosition = targetPort.Coordinates;
 
             float distance = Vector2.Distance(currentPosition, targetPosition);
@@ -89,7 +89,7 @@ namespace PirateGame.Navigation
             Vector2 direction = (targetPosition - currentPosition).normalized;
             Vector2 movement = direction * speed * Time.fixedDeltaTime;
             
-            // Use rb.MovePosition instead of modifying transform.position directly
+            // Use rb.MovePosition for physics-based movement
             if (rb != null)
             {
                 rb.MovePosition(rb.position + movement);
@@ -98,7 +98,7 @@ namespace PirateGame.Navigation
 
         private void RotateTowardsTarget()
         {
-            Vector2 currentPosition = transform.position;
+            Vector2 currentPosition = rb.position;
             Vector2 targetPosition = targetPort.Coordinates;
             
             Vector2 direction = targetPosition - currentPosition;
@@ -106,10 +106,10 @@ namespace PirateGame.Navigation
             
             Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
             
-            // Use rb.MoveRotation instead of modifying transform.rotation directly
+            // Use rb.MoveRotation for physics-based rotation
             if (rb != null)
             {
-                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime));
+                rb.MoveRotation(Quaternion.Slerp(Quaternion.Euler(0, 0, rb.rotation), targetRotation, rotationSpeed * Time.fixedDeltaTime));
             }
         }
 
