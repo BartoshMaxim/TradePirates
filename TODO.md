@@ -177,3 +177,7 @@ GOAL: Replace primitive cargo int with a structured inventory supporting stackin
 - Existing systems compile without NullReferenceExceptions.
 
 
+## 8. Encounter System Foundation
+
+- [x] **8.1: Create EncounterManager.cs in Assets/Scripts/Core**
+
