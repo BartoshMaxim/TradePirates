@@ -58,9 +58,9 @@ All movement, UI and encounter logic must depend on this state machine.
 
 ### 5.3 Enforce Single Source of Truth
 
-- [ ] No other class is allowed to store game state.
-- [ ] No other class may modify state directly.
-- [ ] All state transitions must call GameStateManager.ChangeState().
+- [x] No other class is allowed to store game state.
+- [x] No other class may modify state directly.
+- [x] All state transitions must call GameStateManager.ChangeState().
 
 ---
 
