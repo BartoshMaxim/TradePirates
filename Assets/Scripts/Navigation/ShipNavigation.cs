@@ -102,14 +102,14 @@ namespace PirateGame.Navigation
             Vector2 targetPosition = targetPort.Coordinates;
             
             Vector2 direction = targetPosition - currentPosition;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             
-            Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            
-            // Use rb.MoveRotation for physics-based rotation
+            // Use rb.MoveRotation with angle interpolation for physics-based rotation
             if (rb != null)
             {
-                rb.MoveRotation(Quaternion.Slerp(Quaternion.Euler(0, 0, rb.rotation), targetRotation, rotationSpeed * Time.fixedDeltaTime));
+                float currentAngle = rb.rotation;
+                float newAngle = Mathf.LerpAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+                rb.MoveRotation(newAngle);
             }
         }
 
