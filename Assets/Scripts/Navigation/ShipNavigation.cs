@@ -12,6 +12,7 @@ namespace PirateGame.Navigation
         [SerializeField] private float maxSpeed = 10f;
         [SerializeField] private UINotification uiNotification;
         [SerializeField] private GameStateManager gameStateManager;
+        [SerializeField] private PortUIManager portUIManager;
 
         private ShipStats shipStats;
         private Rigidbody2D rb;
@@ -35,6 +36,12 @@ namespace PirateGame.Navigation
             if (gameStateManager == null)
             {
                 gameStateManager = FindObjectOfType<GameStateManager>();
+            }
+            
+            // Auto-find PortUIManager if not assigned
+            if (portUIManager == null)
+            {
+                portUIManager = FindObjectOfType<PortUIManager>();
             }
         }
 
@@ -76,6 +83,16 @@ namespace PirateGame.Navigation
                 if (gameStateManager != null)
                 {
                     gameStateManager.ChangeState(GameState.Port);
+                }
+                
+                // Get PortEconomy from the port
+                PortEconomy portEconomy = targetPort.GetComponent<PortEconomy>();
+                Ship ship = GetComponent<Ship>();
+                
+                // Show port UI if available
+                if (portUIManager != null && portEconomy != null && ship != null)
+                {
+                    portUIManager.ShowPortUI(portEconomy, ship);
                 }
                 return;
             }

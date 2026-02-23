@@ -11,6 +11,7 @@ namespace PirateGame.UI
         [SerializeField] private GameObject portUIPanel;
         [SerializeField] private Transform itemListContainer;
         [SerializeField] private GameObject itemUIPrefab;
+        [SerializeField] private Button leavePortButton;
 
         private PortEconomy currentPortEconomy;
         private Ship currentShip;
@@ -48,8 +49,26 @@ namespace PirateGame.UI
         {
             if (newState == GameState.Port)
             {
-                // We'll need to get the current port and ship references
-                // This will be called by external code
+                // Find the current port and ship
+                ShipNavigation shipNavigation = FindObjectOfType<ShipNavigation>();
+                if (shipNavigation != null)
+                {
+                    Port currentPort = shipNavigation.GetCurrentTarget();
+                    if (currentPort != null)
+                    {
+                        PortEconomy portEconomy = currentPort.GetComponent<PortEconomy>();
+                        Ship ship = shipNavigation.GetComponent<Ship>();
+                        
+                        if (portEconomy != null && ship != null)
+                        {
+                            ShowPortUI(portEconomy, ship);
+                        }
+                        else
+                        {
+                            Debug.LogError("PortUIManager: Could not find PortEconomy or Ship components!");
+                        }
+                    }
+                }
             }
         }
 
@@ -78,7 +97,27 @@ namespace PirateGame.UI
             currentShip = ship;
 
             portUIPanel.SetActive(true);
+            
+            // Setup leave button if available
+            if (leavePortButton != null)
+            {
+                leavePortButton.onClick.RemoveAllListeners();
+                leavePortButton.onClick.AddListener(OnLeavePortClicked);
+            }
+            
             UpdateItemList(portEconomy, ship);
+        }
+
+        /// <summary>
+        /// Called when the Leave Port button is clicked
+        /// </summary>
+        public void OnLeavePortClicked()
+        {
+            if (gameStateManager != null)
+            {
+                gameStateManager.ChangeState(GameState.WorldMap);
+                HidePortUI();
+            }
         }
 
         /// <summary>
@@ -127,7 +166,7 @@ namespace PirateGame.UI
                 if (portItemUI != null)
                 {
                     int playerQuantity = ship.GetItemQuantity(itemPrice.item);
-                    portItemUI.Setup(itemPrice.item, itemPrice.price, playerQuantity);
+                    portItemUI.Setup(itemPrice.item, itemPrice.price, playerQuantity, this, ship, portEconomy);
                 }
                 else
                 {

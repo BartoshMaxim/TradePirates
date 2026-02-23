@@ -9,13 +9,16 @@ namespace PirateGame.UI
     {
         [SerializeField] private TextMeshProUGUI itemNameText;
         [SerializeField] private TextMeshProUGUI priceText;
-    [SerializeField] private TextMeshProUGUI playerQuantityText;
+        [SerializeField] private TextMeshProUGUI playerQuantityText;
         [SerializeField] private Button buyButton;
         [SerializeField] private Button sellButton;
 
         private ItemData currentItem;
         private int currentPrice;
         private int currentPlayerQuantity;
+        private PortUIManager portUIManager;
+        private Ship playerShip;
+        private PortEconomy currentPortEconomy;
 
         /// <summary>
         /// Setup the UI element with item data
@@ -23,11 +26,17 @@ namespace PirateGame.UI
         /// <param name="item">The item data</param>
         /// <param name="price">The current price at this port</param>
         /// <param name="playerQuantity">How many the player currently has</param>
-        public void Setup(ItemData item, int price, int playerQuantity)
+        /// <param name="uiManager">Reference to the PortUIManager</param>
+        /// <param name="ship">Reference to the player's ship</param>
+        /// <param name="portEconomy">Reference to the port's economy</param>
+        public void Setup(ItemData item, int price, int playerQuantity, PortUIManager uiManager, Ship ship, PortEconomy portEconomy)
         {
             currentItem = item;
             currentPrice = price;
             currentPlayerQuantity = playerQuantity;
+            portUIManager = uiManager;
+            playerShip = ship;
+            currentPortEconomy = portEconomy;
 
             if (itemNameText != null)
             {
@@ -60,16 +69,30 @@ namespace PirateGame.UI
 
         private void OnBuyClicked()
         {
-            // This will need to be connected to the Ship's BuyItem method
-            // For now, we'll just log
-            Debug.Log($"Buy clicked for {currentItem.ItemName} at price {currentPrice}");
+            if (playerShip != null && currentPortEconomy != null && currentItem != null)
+            {
+                bool success = playerShip.BuyItem(currentItem, currentPortEconomy);
+                if (success && portUIManager != null)
+                {
+                    portUIManager.RefreshUI();
+                    // Update the player quantity display
+                    UpdatePlayerQuantity(playerShip.GetItemQuantity(currentItem));
+                }
+            }
         }
 
         private void OnSellClicked()
         {
-            // This will need to be connected to the Ship's SellItem method
-            // For now, we'll just log
-            Debug.Log($"Sell clicked for {currentItem.ItemName} at price {currentPrice}");
+            if (playerShip != null && currentPortEconomy != null && currentItem != null)
+            {
+                bool success = playerShip.SellItem(currentItem, currentPortEconomy);
+                if (success && portUIManager != null)
+                {
+                    portUIManager.RefreshUI();
+                    // Update the player quantity display
+                    UpdatePlayerQuantity(playerShip.GetItemQuantity(currentItem));
+                }
+            }
         }
 
         /// <summary>
