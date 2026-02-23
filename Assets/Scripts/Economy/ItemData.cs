@@ -16,5 +16,7 @@ namespace PirateGame.Economy
         public int BaseValue => baseValue;
         public int MaxStack => maxStack;
         public float Weight => weight;
+        
+        // Task 7.2 completed: Added maxStack and weight fields with getters
     }
 }
