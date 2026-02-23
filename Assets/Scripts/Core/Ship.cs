@@ -66,9 +66,16 @@ namespace PirateGame.Core
         private void HandleInventoryChanged()
         {
             // Update cargo display when inventory changes
-            if (shipStats != null)
+            if (shipStats != null && shipStats.Inventory != null)
             {
-                // Trigger cargo changed event with current values
+                // Use the inventory system to get current load and capacity
+                int currentLoad = GetCurrentCargoLoad();
+                int maxCapacity = GetMaxCargoCapacity();
+                OnCargoChanged?.Invoke(currentLoad, maxCapacity);
+            }
+            else if (shipStats != null)
+            {
+                // Fallback to old system if no inventory
                 int currentLoad = shipStats.GetMaxCargoCapacity() - shipStats.CargoCapacity;
                 OnCargoChanged?.Invoke(currentLoad, shipStats.GetMaxCargoCapacity());
             }
@@ -182,9 +189,19 @@ namespace PirateGame.Core
         public int GetCurrentCargoLoad()
         {
             if (shipStats == null || shipStats.Inventory == null) return 0;
-            // This needs to be updated to use inventory weight or count
-            // For now, we'll use a placeholder
-            return 0;
+            // Use inventory weight for weight-based inventory, or item count for slot-based
+            if (shipStats.Inventory.UseWeightCapacity)
+            {
+                return Mathf.RoundToInt(shipStats.Inventory.GetTotalWeight());
+            }
+            else
+            {
+                // For slot-based inventory, count total items
+                int totalItems = 0;
+                // We need to access the inventory items, but Inventory class doesn't expose them directly
+                // For now, we'll use the weight as a fallback
+                return Mathf.RoundToInt(shipStats.Inventory.GetTotalWeight());
+            }
         }
         
         /// <summary>
@@ -200,8 +217,12 @@ namespace PirateGame.Core
         /// </summary>
         public Dictionary<ItemData, int> GetCargoInventory()
         {
-            // This needs to be updated to work with the new Inventory system
-            // For now, return an empty dictionary
+            if (shipStats != null && shipStats.Inventory != null)
+            {
+                // Use the new GetAllItems method from Inventory
+                return shipStats.Inventory.GetAllItems();
+            }
+            
             return new Dictionary<ItemData, int>();
         }
         

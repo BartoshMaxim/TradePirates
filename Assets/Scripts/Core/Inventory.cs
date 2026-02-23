@@ -148,5 +148,28 @@ namespace PirateGame.Core
             }
             return total;
         }
+
+        /// <summary>
+        /// Get all items in the inventory as a dictionary
+        /// </summary>
+        public Dictionary<ItemData, int> GetAllItems()
+        {
+            Dictionary<ItemData, int> itemDict = new Dictionary<ItemData, int>();
+            foreach (InventoryItem inventoryItem in items)
+            {
+                if (inventoryItem.item != null)
+                {
+                    if (itemDict.ContainsKey(inventoryItem.item))
+                    {
+                        itemDict[inventoryItem.item] += inventoryItem.quantity;
+                    }
+                    else
+                    {
+                        itemDict[inventoryItem.item] = inventoryItem.quantity;
+                    }
+                }
+            }
+            return itemDict;
+        }
     }
 }
