@@ -136,7 +136,7 @@ The following must be true:
 - [x] **6.4 Real Inventory System:** In `Ship.cs`, implement a real inventory using `private Dictionary<ItemData, int> cargoInventory`. 
     - `BuyItem`: Check if `currentCargoLoad < shipStats.CargoCapacity`. If true, add to dictionary, deduct gold, increase `currentCargoLoad`, trigger events.
     - `SellItem`: Check if `cargoInventory.ContainsKey(item)` and amount > 0. If true, remove from dictionary, add gold, decrease `currentCargoLoad`, trigger events.
-- [ ] **6.5 Fix Physics Movement:** In `ShipNavigation.cs`, stop modifying `transform.position` and `transform.rotation` inside `FixedUpdate()`. Use `rb.MovePosition()` and `rb.MoveRotation()` strictly. Calculate the new position and rotation based on `Time.fixedDeltaTime` to ensure smooth physics step evaluation.
+- [x] **6.5 Fix Physics Movement:** In `ShipNavigation.cs`, stop modifying `transform.position` and `transform.rotation` inside `FixedUpdate()`. Use `rb.MovePosition()` and `rb.MoveRotation()` strictly. Calculate the new position and rotation based on `Time.fixedDeltaTime` to ensure smooth physics step evaluation.
 - [ ] **6.6 Optimize Economy Lookups:** In `PortEconomy.cs`, keep the `List<ItemPrice>` for Inspector serialization, but build a `private Dictionary<ItemData, int> runtimePrices` in the `Awake()` method. Refactor `GetItemPrice(ItemData item)` to use `runtimePrices.TryGetValue` for O(1) lookups instead of the linear `foreach` loop.
 
 ---
