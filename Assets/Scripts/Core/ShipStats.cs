@@ -20,6 +20,48 @@ namespace PirateGame.Core
         {
             // Initialize max cargo capacity with the starting value
             maxCargoCapacity = cargoCapacity;
+            
+            // Subscribe to inventory changes if inventory exists
+            if (inventory != null)
+            {
+                inventory.OnInventoryChanged += HandleInventoryChanged;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (inventory != null)
+            {
+                inventory.OnInventoryChanged -= HandleInventoryChanged;
+            }
+        }
+
+        private void HandleInventoryChanged()
+        {
+            // Update cargo display when inventory changes
+            UpdateCargoDisplay();
+        }
+
+        private void UpdateCargoDisplay()
+        {
+            if (inventory != null)
+            {
+                // For weight-based inventory, calculate current and max
+                float currentWeight = inventory.GetTotalWeight();
+                float maxWeight = inventory.MaxWeight;
+                
+                // Convert to int for compatibility with existing event
+                int currentLoad = Mathf.RoundToInt(currentWeight);
+                int maxLoad = Mathf.RoundToInt(maxWeight);
+                
+                OnCargoChanged?.Invoke(currentLoad, maxLoad);
+            }
+            else
+            {
+                // Fallback to old system
+                int currentLoad = maxCargoCapacity - cargoCapacity;
+                OnCargoChanged?.Invoke(currentLoad, maxCargoCapacity);
+            }
         }
 
         public int Gold
@@ -49,9 +91,7 @@ namespace PirateGame.Core
                 if (cargoCapacity != value)
                 {
                     cargoCapacity = value;
-                    // Calculate current cargo load: max - available capacity
-                    int currentLoad = maxCargoCapacity - cargoCapacity;
-                    OnCargoChanged?.Invoke(currentLoad, maxCargoCapacity);
+                    UpdateCargoDisplay();
                 }
             }
         }
@@ -61,6 +101,10 @@ namespace PirateGame.Core
         // Helper method to get max cargo capacity (for UI)
         public int GetMaxCargoCapacity()
         {
+            if (inventory != null && inventory.UseWeightCapacity)
+            {
+                return Mathf.RoundToInt(inventory.MaxWeight);
+            }
             return maxCargoCapacity;
         }
     }
