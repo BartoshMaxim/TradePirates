@@ -10,8 +10,8 @@ $AIDER_PATH   = "C:\Users\Admin\.local\bin\aider.exe"
 $STOP_FILE    = "$PROJECT_PATH\STOP_AGENT"
 
 # --- 2. SAFETY LIMITS ---
-$MAX_ITERATIONS = 10    # The agent will stop after this many tasks
-$SLEEP_SECONDS  = 5    # Time between tasks
+$MAX_ITERATIONS = 15    # The agent will stop after this many tasks
+$SLEEP_SECONDS  = 2    # Time between tasks
 $iterationCount = 0
 
 # --- 3. PRE-FLIGHT CHECKS ---

@@ -783,3 +783,773 @@
 +        5. If build.log contains 'error', fix the code until it compiles.
 +        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
 +    
+
+# 2026-02-23 22:09:31.888603
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:09:31.888603
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:11:14.009064
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:11:14.009064
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:12:10.491052
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:12:10.491052
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:13:23.733159
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:13:23.733159
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:14:52.929457
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:14:52.929457
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:16:38.285249
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:16:38.285249
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:18:33.166781
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:18:33.166781
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:20:14.196142
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:20:14.196142
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:20:42.390428
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:20:42.390428
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:21:31.192994
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 22:21:31.192994
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:25:20.380097
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:25:20.380097
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:28:53.964557
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:28:53.964557
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:29:51.823394
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:29:51.823394
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:30:53.997209
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:30:53.998207
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:31:30.700642
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:31:30.700642
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:32:47.787122
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:32:47.788123
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:33:08.686758
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:33:08.686758
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:36:25.842718
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:36:25.843720
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:37:52.046338
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:37:52.047338
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:38:45.723701
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:38:45.723701
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:42:24.235949
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:42:24.235949
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:44:12.082800
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:44:12.082800
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:45:29.763368
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:45:29.763368
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:46:55.306354
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:46:55.307353
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:49:00.639770
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:49:00.639770
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:51:14.643064
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:51:14.644067
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:54:42.452321
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:54:42.452321
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:56:30.826142
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:56:30.827142
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:57:41.316898
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:57:41.316898
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:59:35.738429
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-23 23:59:35.739429
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:00:27.698270
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:00:27.698270
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:02:48.494796
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:02:48.494796
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:04:38.062114
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:04:38.062114
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:05:44.757313
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:05:44.757313
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:06:14.257997
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
+
+# 2026-02-24 00:06:14.257997
++
++        1. Read TODO.md and find the first task marked with [ ].
++        2. Implement it using C# in Unity. 
++        3. Follow these rules: Namespace 'PirateGame.Core', use [SerializeField], comments in English.
++        4. After coding, verify the build by running this command exactly:
++           'C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe -batchmode -projectPath C:\Users\Admin\TradePirates -quit -logFile C:\Users\Admin\TradePirates\build.log'
++        5. If build.log contains 'error', fix the code until it compiles.
++        6. Once build is clean, mark task as [x] in TODO.md and commit with a clear message.
++    
